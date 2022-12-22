@@ -1,0 +1,98 @@
+###
+GET http://localhost:9000/api/usuarios HTTP/1.1
+###
+GET http://localhost:9000/api/eventos HTTP/1.1
+###
+GET http://localhost:9000/api/eventos/5 HTTP/1.1
+###
+POST http://localhost:9000/api/usuarios HTTP/1.1
+Content-Type: application/json
+
+{
+    "usu_id":"31",
+    "usu_email":"fredy.moyano@o365.unab.edu.co",
+    "usu_clave": "fredy",
+    "usu_nombres": "Fredy",
+    "usu_apellidos": "Moyano",
+    "usu_administrador": "Si"
+
+
+}
+###
+GET http://localhost:9000/api/usuarios/fredy.moyano@o365.unab.edu.co/1/ HTTP/1.1
+###
+GET http://localhost:9000/api/usuarios/fredy.moyano@o365.unab.edu.co/fredy/si HTTP/1.1
+
+###
+GET http://localhost:9000/api/usuarios/ejemplo3@gmail.com/123 HTTP/1.1
+###
+POST http://localhost:9000/api/eventos HTTP/1.1
+Content-Type: application/json
+
+{
+    "eve_id":"4",
+    "eve_fecha":"2022-12-10",
+    "equ_equipo1":"Santa fe",
+    "equ_equipo2": "Millonarios",
+    "eve_marca1": "2",
+    "eve_marca2": "1",
+    "dep_id": "1",
+    "eve_descrip": "Futbol",
+ 
+
+}
+###
+DELETE http://localhost:9000/api/usuarios/usu_id/4 HTTP/1.1
+###
+PUT http://localhost:9000/api/usuarios/usu_id/3 HTTP/1.1
+Content-Type: application/json
+
+{
+     "usu_id":"3",
+    "usu_email":"fredy.moyano@o365.unab.edu.co",
+    "usu_clave": "1",
+    "usu_nombres": "Fredy",
+    "usu_apellidos": "Moyano "
+}
+###
+PUT http://localhost:9000/api/eventos/ideventos/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "ideventos":"1",
+    "fecha":"2022-12-10",
+    "equi1":"Chico",
+    "equi2": "Millonarios",
+    "marca1": "2",
+    "marca2": "1",
+    "deporte": "Futbol",
+    "descrip": "Futbol Colombiano"
+
+}
+###
+GET http://localhost:9000/api/deportes HTTP/1.1
+###
+POST http://localhost:9000/api/deportes HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_deporte":"2",
+    "dep_nombre":"tennis"
+
+}
+###
+POST http://localhost:9000/api/eventos HTTP/1.1
+Content-Type: application/json
+
+{
+    "eve_id":"14",
+    "eve_fecha": "2023-12-11",
+    "equ_equipo1":"9",
+    "equ_equipo2": "8",
+    "eve_marca1": "2",
+    "eve_marca2": "1",
+    "dep_id": "15",
+    "eve_descrip": "Futbol"
+ 
+
+}
